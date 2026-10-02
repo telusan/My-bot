@@ -16,7 +16,7 @@ from aiogram.types import (CallbackQuery, InlineKeyboardButton, InlineKeyboardMa
                            MenuButtonWebApp, Message, WebAppInfo)
 
 # ============================ НАСТРОЙКИ ============================
-BOT_TOKEN = os.getenv("8930095035:AAH5TO816P0NCRAE6Sifr8-KIrV7JtrsYO4")   # токен от @BotFather
+BOT_TOKEN = os.getenv("https://my-bot-cun5.onrender.com")   # токен от @BotFather
 WEBAPP_URL = os.getenv("WEBAPP_URL", "https://caretaker-grass-nutmeg.ngrok-free.dev")       # публичный HTTPS-адрес сайта
 PORT = int(os.getenv("PORT", "8080"))                              # порт сайта
 DB_FILE = os.getenv("DB_FILE", "qarz.db")                          # файл базы данных
@@ -364,7 +364,7 @@ api("list").catch(()=>{S={lang:(tg.initDataUnsafe.user||{}).language_code=="uz"?
 # ----------------------------- ЗАПУСК -----------------------------
 async def main():
     app = web.Application()
-    bot = Bot("8930095035:AAH5TO816P0NCRAE6Sifr8-KIrV7JtrsYO4")
+    bot = Bot("https://my-bot-cun5.onrender.com")
     app.add_routes([web.get("/", index), web.post("/api/{act}", api)])
     runner = web.AppRunner(app)
     await runner.setup()
